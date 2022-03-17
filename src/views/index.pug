@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  nav.header
+    .logo PUG WEBSITE
+        img(src="/img/pug.ico", alt="", style="height:3rem")
+        img(src="/img/sass.png", alt="", style="height:3rem")
+    a(href="#home").
+        HOME
+    a(href="#pugInfo").
+        ABOUT PUGS
+    a(href="#pugHistory").
+        HISTORY
+    a(href="").
+        GALLERY
+    a(href="/esp")
+      img(src="https://raw.githubusercontent.com/hampusborgos/country-flags/main/png100px/es.png", alt="", style="height:3rem")
+    a(href="/eng")
+      img(src="https://raw.githubusercontent.com/hampusborgos/country-flags/main/png100px/us.png", alt="", style="height:3rem")
+  .mainTitle
+          img(src="img/pugtitle.jpg", alt="")
+          .text-title
+              h1 Pug Website made With PUG + <i class='fab fa-sass'></i> (and some ☕)
+              p I am a owner of a Pug, so I decided to make a landing page with pug talking about pugs
+          - const pugInfo = {age: 'has a lifespan of 12 to 15 years', height: 'usually height between 8 to 12 cm', weight: 'in the range of 14-18 lb (6.4-8.2 kg)'}
+          - const pugImg = {age: 'birthday.gif', height: 'height.png', weight: 'weight.png'};
+  .pugInfo There are arround pug in the word, this breed is also known as the dog that everyone wanted one time in life.
+      p to start knowing more about the breed, there are some useful info that you need to know about them
+      .infobox
+          for n, i in pugInfo
+                  .box
+                      .upperTitle= "pugs " + i
+                      img(src=`/img/${i}.gif`, style="width:30%")
+                      p= n
+  .pugHistory
+      img(src="/img/pughistory.jpg", alt="", style="width: 40%")
+      .historyCointainer
+          h2 PUGS HIST
+          p Since before 400 B.C., the Pug, has been domesticated and dedicated to mankind. The Pug is of oriental origin; China is the earliest known source of this beautiful d
+          p From China, sightings expanded to Japan and eventually Europe, where many royal courts favored the Pug. In 1572, one of this smart breed of dog, saved Prince William of Orange by alerting the approaching Spaniards at Herming
+          p By 1790 Pugs had spread to France; in this year Napoleon’s wife Josephine, used her Pug “Fortune” to transport secret messages to her husband, while imprisoned in Les Carmes. The American Kennel Club accepted registration for the Pug in 1885.
+  footer.
+      Made by Juani 2022
+  script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js' integrity='sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js' integrity='sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13' crossorigin='anonymous')

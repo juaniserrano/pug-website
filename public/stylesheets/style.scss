@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500&display=swap');
+$font-global: 'Dosis', sans-serif;
+$primary-color: #333;
+$brown: #ac7330;
+$black: #363634;
+$dark-brown: #524636;
+$light-brown: #b19a78;
+$grey-white: #d1c5ab;
+@mixin cont-shadow {
+	-webkit-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, 0.25);
+	-moz-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, 0.25);
+	box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, 0.25);
+}
+
+* {
+	font-family: $font-global;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-weight: 400;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	background-color: $light-brown;
+	color: $black;
+	nav.header {
+		background: $black;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-around;
+		color: $grey-white;
+		overflow: hidden;
+		list-style-type: none;
+		@include cont-shadow();
+	}
+
+	.mainTitle {
+		position: relative;
+		width: 100%; /* for IE 6 */
+		img {
+			width: 100%;
+		}
+		@include cont-shadow();
+		.text-title {
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			color: #fff;
+			text-shadow: 0 0 5px $black;
+		}
+	}
+
+	.pugInfo {
+		align-items: center;
+		justify-content: center;
+		background-color: $dark-brown;
+		color: $grey-white;
+		text-align: center;
+		padding: 1rem 0 2rem 0;
+		@include cont-shadow();
+		.infobox {
+			text-transform: capitalize;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.box {
+			background-color: $dark-brown;
+			color: $grey-white;
+			align-items: center;
+			border: #333 1px solid;
+			text-align: center;
+			width: 25%;
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+				rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+		}
+		.upperTitle {
+			text-transform: uppercase;
+		}
+		.header {
+			background-color: #333;
+		}
+	}
+
+	.pugHistory {
+		align-items: center;
+		justify-content: space-around;
+		color: $grey-white;
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		margin: 2rem;
+		@include cont-shadow();
+	}
+
+	footer {
+		text-align: center;
+		background: $black;
+		color: $grey-white;
+	}
+}
