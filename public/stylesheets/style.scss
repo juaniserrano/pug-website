@@ -17,6 +17,10 @@ $grey-white: #d1c5ab;
 }
 html {
 	scroll-behavior: smooth;
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
 }
 
 body {
@@ -37,6 +41,22 @@ body {
 		overflow: hidden;
 		list-style-type: none;
 		@include cont-shadow();
+		.lang {
+			width: auto;
+			padding: 0.5rem;
+		}
+		a:link {
+			color: red;
+		}
+
+		a:hover .logo{
+			color: inherit;
+			text-decoration: none;
+		}
+
+		a:active {
+			color: green;
+		}
 	}
 
 	.mainTitle {
